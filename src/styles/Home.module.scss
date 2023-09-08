@@ -1,4 +1,6 @@
-.spline {
+.spline 
+{
+    pointer-events: auto;
     position:absolute;
     margin:0;
     top:0;
@@ -8,7 +10,7 @@
     // desktop:translate-x-[200px] desktop:scale-[0.8];
 }
 
-Content{
+.content{
     position:absolute;
     top:30px;
     display: flex;
@@ -18,7 +20,7 @@ Content{
     padding: 0 30px 100px;
     gap: 80px;
 
-    & Menu{
+    & .menu{
         display:flex;
         gap:30px;
         align-items: center;
@@ -26,7 +28,7 @@ Content{
         padding: 0;
 
         & li{
-            & Link{
+            & .myLink{
                 
                 text-decoration: none;
                 color:white;
@@ -44,6 +46,18 @@ Content{
 
     }
 
+    & h1 {
+        font-weight: 600;
+        font-size: 74px;
+        margin:0;
+        max-width: 1200px;
+    }
+
+    & p{
+        font-weight: 400;
+        line-height: 150%;
+        max-width: 300px;
+    }
 
 }
 
