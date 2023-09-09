@@ -1,0 +1,80 @@
+.spline 
+{
+    canvas{
+        pointer-events: auto;
+        position:absolute;
+        margin:0;
+        top:0;
+        right:0;
+        width: 100vw;
+        height: 100vh; 
+    }
+    
+
+    // desktop:translate-x-[200px] desktop:scale-[0.8];
+}
+
+.content{
+    position:absolute;
+    top:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 0 30px 100px;
+    gap: 80px;
+    pointer-events: none;
+
+    & .menu{
+        display:flex;
+        gap:30px;
+        align-items: center;
+        margin: 0 30px 100px;
+        padding: 0;
+        pointer-events: auto;
+
+        & li {
+            list-style: none;
+
+             & .myLink{
+                text-decoration: none;
+                color:white;
+                padding: 8px 20px;
+                border: 1px solid rgba(255,255,255,0);
+                transition: 1000ms;
+                border-radius: 14px;
+                transition-duration: 1000ms;
+                &:hover{
+                    border-color: rgba(255,255,255,0.2);
+                }
+                
+            }
+                & button{
+                        height: fit-content;
+                        padding: 12px;
+                    }
+                
+
+
+        }
+           
+
+    }
+
+    & h1 {
+        font-weight: 600;
+        font-size: 74px;
+        margin:0;
+        max-width: 1200px;
+        pointer-events: auto;
+    }
+
+    & p{
+        font-weight: 400;
+        line-height: 150%;
+        max-width: 300px;
+        pointer-events: auto;
+    }
+
+}
+
