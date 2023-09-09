@@ -26,6 +26,9 @@
     
     transition:1s;
 
+    pointer-events: auto;
+    cursor: pointer;
+
     }
 
   button:hover{
