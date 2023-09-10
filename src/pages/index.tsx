@@ -35,6 +35,7 @@ export default function App() {
                     <li><Link className={`${styles.myLink}`} href={"#"}>Download</Link></li>
                     <li><Link className={`${styles.myLink}`} href={"#"}>App</Link></li>
                     <li><Link className={`${styles.myLink}`} href={"#"}>Login</Link></li>
+                    <li><Link className={`${styles.myLink}`} href={"https://www.twitch.tv/obtusedangle"}>ObtusedAngle</Link></li>
                     <li><button>Get Started</button></li>
 
                 </Menu>
@@ -45,7 +46,7 @@ export default function App() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M20 18C21.1 18 22 17.1 22 16V6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V16C2 17.1 2.9 18 4 18H0V20H24V18H20ZM4 6H20V16H4V6Z" fill="#FFF" />
                     </svg>
-                    Download for MAC
+                    Bubba was here
                 </button>
             </Content>
 
