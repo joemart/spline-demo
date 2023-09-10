@@ -2,3 +2,9 @@
 @mixin pointer($val){
     pointer-events: $val;
 }
+
+@mixin mQ($size){
+    @media screen and (max-width:$size){
+        @content
+    }
+}
