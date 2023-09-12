@@ -2,6 +2,7 @@
 .content{
     position:absolute;
     top:30px;
+    left:30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,42 +11,7 @@
     gap: 80px;
     pointer-events: none;
 
-    .menu{
-        display:flex;
-        gap:30px;
-        align-items: center;
-        margin: 0 30px 100px;
-        padding: 0;
-        @include pointer(auto);
-
-        li {
-            list-style: none;
-
-             .myLink{
-                text-decoration: none;
-                color:white;
-                padding: 8px 20px;
-                border: 1px solid rgba(255,255,255,0);
-                transition: 1000ms;
-                border-radius: 14px;
-                transition-duration: 1000ms;
-                &:hover{
-                    border-color: rgba(255,255,255,0.2);
-                }
-                
-            }
-                button{
-                        height: fit-content;
-                        padding: 12px;
-                    }
-                
-
-
-        }
-           
-
-    }
-
+    
     h1 {
         color: variables.$myVar;
         font-weight: 600;
@@ -62,4 +28,115 @@
         @include pointer(auto);
     }
 
+}
+
+.menu{
+
+    @include mQ(variables.$mobile){
+        display: none;
+        position: absolute;
+
+        &--open{
+            display: block;
+
+            li{
+                display: flex;
+                align-items: start;
+                *{
+                    text-align: left;
+                    width:100%;
+                    height:20px;
+                    padding:0;
+                }
+            }
+        }
+    }
+
+    display:flex;
+    gap:30px;
+    align-items: center;
+    margin: 0 30px 100px;
+    padding: 0;
+    @include pointer(auto);
+
+    li {
+        list-style: none;
+
+         .myLink{
+            text-decoration: none;
+            color:white;
+            padding: 8px 20px;
+            border: 1px solid rgba(255,255,255,0);
+            
+            border-radius: 14px;
+            transition-duration: 1000ms;
+            &:hover{
+                border-color: rgba(255,255,255,0.2);
+            }
+            
+        }
+            button{
+                    height: fit-content;
+                    padding: 12px;
+                }
+            
+
+
+    }
+       
+
+}
+
+
+
+
+.burger{
+   display: none;
+    
+    @include mQ(variables.$mobile){
+        display: block;
+        pointer-events: auto;
+        cursor:pointer;
+        path{
+            &:nth-child(1){
+                
+                transform:rotate(0);
+            }
+            &:nth-child(2){
+                opacity:1;
+            }
+            &:nth-child(3){
+                
+                transform:rotate(0);
+            }
+        }
+        &--open{
+            path{
+                &:nth-child(1){
+                    transition: 1000ms;
+                    transform:translateX(9px) rotate(45deg) ;
+                    
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:nth-child(3){
+                    transition: all 1s ease;
+                    transform:translate(-7px,10px) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+
+
+.nav{
+    @include mQ(variables.$mobile){
+        width: 80vw;
+        display: flex;
+        justify-content: right;
+
+    }
+    
 }

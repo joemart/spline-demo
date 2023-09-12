@@ -1,5 +1,9 @@
 .spline 
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     canvas{
         pointer-events: auto;
         position:absolute;
@@ -8,9 +12,10 @@
         right:0;
         width: 100vw;
         height: 100vh; 
-        @include mQ("400px"){
-            transform: translateX(200px);
-            scale: (0.8);
+        @include mQ(variables.$mobile){
+            transform: translateX(500px);
+            scale: (0.5);
+            
         }
     }
 }
